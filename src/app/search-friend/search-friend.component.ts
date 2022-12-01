@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./search-friend.component.css']
 })
 export class SearchFriendComponent {
+sname=""
 
+search=()=>
+{
+  let sear:any={"sname":this.sname}
+  console.log(sear)
+}
 }
