@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-add-friend',
@@ -15,5 +16,16 @@ export class AddFriendComponent {
   {
    let friend:any={"name":this.name,"friendName":this.friendName,"friendNickName":this.friendNickName,"DescribeYourFriend":this.DescribeYourFriend}
    console.log(friend)
+   this.api.addFriend(friend).subscribe(
+    (response)=>
+    {
+      console.log(response)
+      
+    }
+   )
+  }
+
+  constructor(private api:ApiService){
+
   }
 }
